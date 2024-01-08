@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+font-family: 'Roboto', sans-serif;
+color: hsl(235, 18%, 26%);
+background-color: hsl(235, 18%, 26%);
+}
+ul{
+list-style: none;
+padding-left: 0;
+}
+li{
+display: flex;
+gap: 12px;
+}
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+
+/* container */
+.container{
+    display: grid;
+    background-color: white;
+}
+.container__img{
+    height: 200px;
+    width: 100%;
+
+    background-image: url(assets/images/illustration-sign-up-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+/* form */
+
+.container__form{
+    display: grid;
+    gap: 15px;
+    padding: 20px 30px;
+}
+.container__form h1{
+    font-size: 2.5rem;
+    color: hsl(234, 29%, 20%);
+}
+.container__form_list{
+    display: grid;
+    gap: 15px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+.form p{
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+}
+.form input{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid hsl(231, 7%, 60%);
+}
+ button{
+    padding: 10px;
+    background-color: hsl(234, 29%, 20%);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+ button:hover{
+    background-color: hsl(4, 100%, 67%);
+    box-shadow: 3px 10px 13px -6px hsl(4, 100%, 67%);
+    -webkit-box-shadow: 3px 10px 13px -6px hsl(4, 100%, 67%);
+    -moz-box-shadow: 3px 10px 13px -6px hsl(4, 100%, 67%);
+}
+/* success */
+.success{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: white;
+    min-height: 100vh;
+}
+.success div{
+    display: grid;
+    gap: 30px;
+}
+.success div h2{
+    font-size: 2.3rem;
+    line-height: 1;
+}
+#dismiss{
+    margin-top: auto;
+}
