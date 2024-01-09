@@ -21,16 +21,17 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        color: white;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: gray;
       }
     </style>
   </head>
   <body>
     <!-- Sign-up form start -->
     <main class="container">
-      <div>
+      <div class="container__figure">
         <figure class="container__img"></figure>
       </div>
       <div class="container__form">
@@ -50,15 +51,18 @@
             more!
           </li>
         </ul>
-        <form class="form">
+        <form class="form" id="emailForm">
           <p>Email address</p>
-          <input type="text" id="email" placeholder="email@company.com" />
-          <button>Subscribe to monthly newsletter</button>
+          <div>
+            <p class="error">invalid email address</p>
+            <input type="email" required id="email" placeholder="email@company.com" />
+          </div>
+          <button type="submit" id="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
     </main>
 
-    <div class="success">
+    <div class="success show">
       <div>      
         <figure>
           <img src="assets/images/icon-success.svg" alt="success icon" />
@@ -75,7 +79,8 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Luis Colina</a>.
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
